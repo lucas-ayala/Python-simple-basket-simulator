@@ -1,4 +1,8 @@
 # Python-simple-basket-simulator
-my very first code, an exercise that simulate a Lakers-Celtics NBA game
+my very first code, an exercise that simulate a Lakers-Celtics NBA 
 
-netx step: time outs
+
+to-do
+-----
+
+- time-outs
