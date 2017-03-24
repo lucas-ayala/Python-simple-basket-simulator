@@ -196,9 +196,6 @@ def duration_check(x):
             print(" \nEnd of the third quarter\n ")
             quarters.append(1 - quarters[2])
             x = quarters[3]
-    #elif len(quarters) == 4:
-        #if lakers.possessions + celtics.possessions == (pos_quarters[0] + pos_quarters[1] + pos_quarters[2] + pos_quarters[3]):
-            #end_game()
     return x
 
 
