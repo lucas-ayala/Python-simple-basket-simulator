@@ -1,4 +1,3 @@
-
 import time
 import random
 
@@ -278,7 +277,7 @@ lakers_end_possessions = lakers.possessions
 celtics_end_possessions = celtics.possessions
 if lakers.points == celtics.points:
     print(" \n-----------\nOVERTIME!!!\n-----------\n ")
-    time.sleep(4)
+    time.sleep(3)
     while lakers.points == celtics.points:
         lakers.possessions = lakers_end_possessions
         celtics.possessions = celtics_end_possessions
