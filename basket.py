@@ -41,7 +41,7 @@ def play(x):
                     if bonus_chance < 3:
                         x = bonus(x)
                     else:
-                        x = ball_change(x)
+                        x = 1 - x
                 else:
                     celtics.points += 3
                     celtics.stats[2] += 1
@@ -50,7 +50,7 @@ def play(x):
                     if bonus_chance < 3:
                         x = bonus(x)
                     else:
-                        x = ball_change(x)
+                        x = 1 - x
             else:
                 print("three points shot missed")
                 if x == 0:
@@ -69,7 +69,7 @@ def play(x):
                     if bonus_chance < 5:
                         x = bonus(x)
                     else:
-                        x = ball_change(x)
+                        x = 1 - x
                 else:
                     celtics.points += 2
                     celtics.stats[0] += 1
@@ -78,7 +78,7 @@ def play(x):
                     if bonus_chance < 5:
                         x = bonus(x)
                     else:
-                        x = ball_change(x)
+                        x = 1 - x
             else:
                 print("two points shot missed")
                 if x == 0:
@@ -94,7 +94,7 @@ def play(x):
             print("turnover")
         else:
             print("steal")
-        x = ball_change(x)
+        x = 1 - x
     return x
 
 
@@ -135,7 +135,7 @@ def free_throw(x):
                 celtics.stats[5] += 1
             board()
             if total == 2:
-                x = ball_change(x)
+                x = 1 - x
         else:
             print("free throw missed")
             if x == 0:
@@ -162,7 +162,7 @@ def bonus(x):
             celtics.stats[4] += 1
             celtics.stats[5] += 1
         board()
-        x = ball_change(x)
+        x = 1 - x
     else:
         print("free throw missed")
         if x == 0:
@@ -170,12 +170,6 @@ def bonus(x):
         else:
             celtics.stats[4] += 1
         x = rebound(x)
-    return x
-
-
-# ball possession
-def ball_change(x):
-    x = 1 - x
     return x
 
 
